@@ -28,8 +28,6 @@ class Util(object):
 
         token_list = cls.get_token_list(line)
 
-        print(token_list)
-
         return (
             len(token_list) >= 3 and token_list[-1] == TOKEN_INDEX_MODE
             and token_list[len(token_list) - 3] in INDEX_MODE_INSTRUCTION_LIST
@@ -38,6 +36,8 @@ class Util(object):
     @classmethod
     def clean(cls, line):
         """
+        Cleans the current line.
+
 
         :param line:
         :type line: str
